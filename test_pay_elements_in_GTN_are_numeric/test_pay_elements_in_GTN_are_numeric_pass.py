@@ -4,7 +4,7 @@ import pandas as pd
 
 def check_columns_type(series):
     for cell in series.values:
-        if cell == int or float:
+        if cell == "int64" or cell == "float64":
             continue
         else:
             return False
@@ -19,7 +19,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_pay_elements_in_GTN_are_numeric(self):
         pay_elements = self.GTN_file.dtypes[4:]
-        self.assertTrue(check_columns_type(pay_elements))
+        self.assertTrue(check_columns_type(pay_elements),
+                        "Pay Elements in GTN file are NOT all numeric")
 
 
 if __name__ == '__main__':
