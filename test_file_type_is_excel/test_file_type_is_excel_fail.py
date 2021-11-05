@@ -3,6 +3,9 @@ import pathlib
 
 
 class MyFileTypeTestCase(unittest.TestCase):
+    """
+    The below tests check if the file types are in .xlsx format
+    """
 
     def setUp(self):
         self.GTN_file_ext = pathlib.Path("fail_data/fail_test.txt").suffix

@@ -3,6 +3,9 @@ import pandas as pd
 
 
 class MyTestCase(unittest.TestCase):
+    """
+    The below tests check if the GTN header structure has changed
+    """
 
     def setUp(self):
         self.GTN_df = pd.read_excel("pass_data/GTN.xlsx", header=None)
