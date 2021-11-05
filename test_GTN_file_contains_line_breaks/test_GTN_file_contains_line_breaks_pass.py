@@ -1,8 +1,6 @@
 import unittest
 import pandas as pd
 
-# to make pandas work properly I had to install openpyxl
-
 
 class MyLineBreakTestCase(unittest.TestCase):
     """
